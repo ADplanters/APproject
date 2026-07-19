@@ -1,0 +1,69 @@
+/* 640 이하일때 ~ */
+@media only screen and (max-width:640px){
+input[type="text"] { height:70px; border:0; padding:5px 20px; box-sizing:border-box; font-size:25px; }
+select { border:1px solid #CCC; height:70px; padding:5px 20px;box-sizing:border-box; font-size:25px; }
+
+video {
+	margin-left:-300px;
+}
+
+
+.content_box { display:inline-block; width:100%; text-align:center; box-sizing:border-box; padding-bottom:80px; }
+
+.main_top_text{ font-size:60px; color:#FFFFFF; padding:20px 30px 30px 30px; word-break: keep-all;}
+.main_top_text span{ color:#ffdd49; font-weight:bold; display:inline-block; }
+
+.main_file_box {width:100%; display:inline-block; text-align:center;}
+.main_file_box div.file_list {display:inline-block; background-image:url('../images/white_alpha_bg.png'); height:100px; border-radius:5px; width:90%; cursor:pointer;}
+.main_file_box div.file_list_on { display:inline-block; background-image:url('../images/black_alpha_bg2.png'); color:#FFFFFF; border-radius:5px; width:90%; cursor:pointer;}
+.main_file_box div.file_list div.file_text { display:flex; align-items: center; height:100px; }
+.main_file_box div.file_list div.file_text span.img > img { height:40px; }
+.main_file_box div.file_list div.file_text span.dimg > img { height:30px; }
+.main_file_box div.file_list div.file_text span.text { width:100%; text-align:left; font-size:22px; font-weight:bold; }
+
+.main_mid_text{ font-size:40px; color:#FFFFFF; padding:30px 20px; }
+.main_mid_text span{ color:#ffdd49; font-weight:bold; }
+
+.main_news_box { height:500px;}
+.main_news_box div.news_list { border-bottom:1px solid #FFFFFF; display:flex; align-items: center;}
+.main_news_box div.news_list .news_content p.title { font-size:30px; padding-top:10px; margin-left:20px; }
+.main_news_box div.news_list .news_content p.info { color:#dfdfdf; font-size:17px; line-height:25px; padding:10px 0px; margin-left:20px;  }
+.main_news_box div.news_list .news_more { color:#FFFFFF; font-size:40px; margin:0px 30px; }
+
+.layer_box {background-image:url('../images/download_bg.jpg'); width:100%;margin:1px; }
+
+.layer_box div.down_box div.bar_box span.title {width:90px; font-weight:bold; padding-right:10px; font-size:18px; }
+
+.layer_box div.down_box div.speed_box { display:inline-block; width:100%;padding:10px 0px; }
+.layer_box div.down_box div.speed_box ul > li { line-height:40px; }
+.layer_box div.down_box div.speed_box ul > li.li_1 { width:18%; font-weight:bold; font-size:18px; }
+.layer_box div.down_box div.speed_box ul > li.li_2 { width:32%; text-align:left; font-size:17px; padding-left:5px; box-sizing:border-box; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.layer_box div.down_box div.speed_box ul > li.state { display:flex; align-items: center; }
+.layer_box div.down_box div.speed_box ul > li.state > span.state_text { width:100%;}
+.layer_box div.down_box div.speed_box ul > li.state > span.state_btn > img  { height:30px;}
+.layer_box div.down_box div.downlist_box > ul { display:inline-block; font-size:15px; line-height:60px; margin:0px; padding:0px; }
+.layer_box div.down_box div.downlist_box > ul > li.filename { display:flex;align-items: center; width:66.5%; font-size:18px; }
+.layer_box div.down_box div.downlist_box > ul > li.filename > span.icon > img { height:30px; }
+
+
+.layer_box2 { width:100%; }
+.layer_box2 > .content_box { width:100%; }
+.layer_box2 > .content_box > .top_container { display:flex; align-items: center; border-bottom:1px solid #FFFFFF;padding:20px 0px; }
+.layer_box2 > .content_box > .top_container > span.logo {width:100%; margin-left:20px;}
+.layer_box2 > .content_box > .top_container > span.btn { cursor:pointer; }
+.layer_box2 > .content_box > .content_title {font-size:43px; font-weight:bold; padding:20px 0px;}
+.layer_box2 > .content_box > .sub_title { font-size:19px; color:#ebebeb; }
+.layer_box2 > .content_box > .input_box > ul { padding:4px 5%; box-sizing:border-box; }
+
+
+.layer_box2 > .content_box > .agree_box { display:inline-block; width:90%; box-sizing:border-box; text-align:left; line-height:33px; font-size:19px; padding:15px 0px; }
+.layer_box2 > .content_box > .btn_box { padding:25px 0px 30px 0px; }
+
+
+.foot_container { width:100%;  background-color:#444444; text-align:center; z-index:1; }
+.foot_container .footer { display:inline-block; width:100%; text-align:center; color:#8b8a8a; padding:15px 0px; }
+.foot_container .footer > p { font-size:13px; line-height:20px;}
+
+
+.checkbox-wrap .check-icon  { display: inline-block; width: 30px; height: 30px; background: url('../images/agreement-check-out.png') left center no-repeat; vertical-align: middle; transition-duration: .3s; background-size:cover; margin-top:-4px; }
+}
