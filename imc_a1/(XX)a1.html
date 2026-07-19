@@ -1,0 +1,444 @@
+<?
+header('Content-Type: text/html; charset=UTF-8');
+
+if($_POST["Update_type"]=="Update_now")
+{
+	$_POST["name"]=strip_tags($_POST["name"]);
+	$_POST["tel"]=strip_tags($_POST["tel"]);
+	$_POST["tel2"]=strip_tags($_POST["tel2"]);
+	$_POST["tel3"]=strip_tags($_POST["tel3"]);
+	$_POST["option1"]=strip_tags($_POST["option1"]);
+	$_POST["option2"]=strip_tags($_POST["option2"]);
+	$_POST["time"]=strip_tags($_POST["time"]);
+	
+	$SEND_DATA_ary=array();
+	$SEND_DATA_ary["ITEM"]="1";
+	$SEND_DATA_ary["DBname"]=$_POST["name"];
+	$SEND_DATA_ary["DBphone"]=$_POST["tel"]."-".$_POST["tel2"]."-".$_POST["tel3"];
+	$SEND_DATA_ary["DBfild1"]=$_POST["option1"];
+	$SEND_DATA_ary["DBfild2"]=$_POST["option2"];
+	$SEND_DATA_ary["DBfild3"]=$_POST["time"];
+	$SEND_DATA_ary["DBip"]=$_SERVER["REMOTE_ADDR"];
+
+	$ch = curl_init();
+	curl_setopt ($ch, CURLOPT_URL,"http://anonymus.kr/api/"); //전달할할 URL 
+	curl_setopt ($ch, CURLOPT_HEADER, false);
+	curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt ($ch, CURLOPT_CONNECTTIMEOUT, 5);
+	curl_setopt ($ch, CURLOPT_POST, 1);
+	curl_setopt ($ch, CURLOPT_POSTFIELDS, $SEND_DATA_ary);
+	curl_setopt ($ch, CURLOPT_TIMEOUT, 5);
+	curl_exec ($ch);
+	curl_close ($ch);
+?>
+	<script>
+	// alert("금등 종복 받아보기 신청이 완료되었습니다.");
+	location.href="success.html";
+	</script>
+<?
+	exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤븐컴퍼니</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f8f74f011f.js" crossorigin="anonymous"></script>
+
+      <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="images/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="images/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="images/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="images/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="images/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+      <link rel="manifest" href="images/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="imag">
+
+
+        <!-- Google tag (gtag.js) 다비컴퍼니 전환 구글태그 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11440726914"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'AW-11440726914');
+        </script>
+
+        <!-- Google tag (gtag.js)          헤븐컴퍼니 -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11476861250"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'AW-11476861250');
+        </script>
+
+
+        <!-- 이벤트 스니펫 헤븐컴퍼니#2 -->
+        <!-- Event snippet for 페이지 조회 conversion page -->
+          <script>
+            gtag('event', 'conversion', {'send_to': 'AW-11476861250/U_UJCOjB3IoZEMKCzOAq'});
+          </script>
+
+                     <!-- Event snippet for 페이지 조회 conversion page
+            In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+            <script>
+              function gtag_report_conversion(url) {
+                var callback = function () {
+                  if (typeof(url) != 'undefined') {
+                    window.location = url;
+                  }
+                };
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-11476861250/U_UJCOjB3IoZEMKCzOAq',
+                    'event_callback': callback
+                });
+                return false;
+              }
+              </script>
+              
+              <!-- Google tag (gtag.js) -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-RE16GE31QZ"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+              
+                gtag('config', 'G-RE16GE31QZ');
+              </script>
+  
+              <!-- Google Tag Manager -->
+              
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KRMQZ65X');</script>
+        <!-- End Google Tag Manager -->      
+
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-025FHK7BN6"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-025FHK7BN6');
+      </script>
+
+</head>
+<body>
+
+  <div class="wrap">
+    <div class="content-1">
+      <p>
+        <span>가장 강력한<br>수익률이 온다</span><br>
+        <strong>업계 최대<br>적중률 보유!</strong>
+      </p>
+    </div>
+    
+    <div class="percent">
+      <p><span id="percent">0</span><span>&#37;</span></p>
+      <div class="percentBg"></div>
+    </div>
+
+    <div class="content-2">
+      <ul id="counts">
+        <li>
+          <p>
+            <strong id="count1">0</strong>
+            <span>누적</span>수익률 <em>&#37;</em>
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong id="count2">0</strong>
+            <span>평균</span>수익률 <em>&#37;</em>
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong id="count3">0</strong>
+            <span>총누적</span>회원수 <em>명</em>
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="content-3">
+      <div>
+        <ul class="graph">
+          <li class="g01"></li>
+          <li class="g02"></li>
+          <li class="g03"></li>
+          <li class="g04">
+            <p id="members">
+              누적회원수 <br>
+              <strong>643,318명</strong>
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div id="sentence1" class="sentence">
+        <p>
+          가장 많은 고객이 선택한
+          <strong>헤븐컴퍼니</strong>
+        </p>
+      </div>
+
+      <div class="btn-green">
+        <a href="#" target="_self" class="link-Btn">
+          체험하기
+        </a>
+      </div>
+    </div>
+
+    <div class="content-4">
+      <p class="content-4-sentence1 content-4-sentence">
+        오직 <strong>헤븐컴퍼니</strong>
+        고객님들을 위한
+        <em>무료혜택</em>
+      </p>
+
+      <div class="btns-all">
+        <ul class="btns">
+          <li><a href="#" target="_self" class="link-Btn">내일 급등 종목 받아보기</a></li>
+          <li><a href="#" target="_self" class="link-Btn">전문가 수익종목 받아보기</a></li>
+          <li><a href="#" target="_self" class="link-Btn">무료 주식종목 추천 서비스</a></li>
+        </ul>
+      </div>
+
+      <p class="content-4-sentence1 content-4-sentence2">
+        내일 <em>주가상승</em><strong>포인트는?</strong>
+      </p>
+
+    </div>
+    
+    <div class="btn-white">
+      <a href="#" target="_self" class="link-Btn">무료혜택 바로가기</a>
+    </div>
+
+    <div class="stock">
+      <ul class="stock-list">
+        <li class="stock-item"><strong>삼성전자</strong> 24.5&#37; &#9650;</li>
+        <li class="stock-item"><strong>셀트리온</strong> 12.1&#37; &#9650;</li>
+        <li class="stock-item"><strong>어보브반도체</strong> 22.5&#37; &#9650;</li>
+        <li class="stock-item">
+          <ul>
+            <li><strong>카카오뱅크</strong> 4.67&#37; &#9650;</li>
+            <li><strong>하이트론</strong> 6.43&#37; &#9650;</li>
+          </ul>
+        </li>
+        <li class="stock-item"><strong>HMM</strong> 7.73&#37; &#9650;</li>
+        <li class="stock-item"><strong>LG디스플레이</strong> 6.3&#37; &#9650;</li>
+        <li class="stock-item">	<strong>카카오</strong> 2.48&#37; &#9650;</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+   
+
+    <div class="infomation">
+
+      <div>
+        <ul>
+          <li>주식거래 플랫폼별 수수료 약식안내</li>
+          <li>키움증권 영웅문 - 0.015%</li>
+          <li>삼성증권 mPOP - 50만원 미만0.497216%</li>
+          <li>NH투자증권 나무 - 제휴은형 계좌전용 0.015%</li>
+        </ul>
+      </div>
+
+      <p>
+        * 개인에 따라 주가결과는 달라질 수 있으며
+        서비스 이용에 따른 최종책임은 이용자에게 있으니
+        투자자 자신의 판단과 책임하에 최종결정을 하시기 바랍니다.
+      </p>
+      <ul>
+        <li>업체명 : 주식회사 헤븐컴퍼니 | 대표자 : 천지훈</li>
+        <li>주소 : 서울특별시 강남구 도산대로 540, 8층</li>
+        <li>사업자번호 : 756-86-01111</li>
+        <li>대표번호 : 1644-9177</li>
+        <li>이메일 : investment@heaven2011.co.kr</li>
+      </ul>
+    </div>
+  </footer>
+  
+  <div class="modal">
+    <div class="modal-content">
+      <a href="#none" class="btn-close"><i class="fa-solid fa-xmark"></i></a>
+      <div class="modal-body">
+        <h2>헤븐투자그룹</h2>
+        <hr>
+        <img src="./images/logo.jpg" alt="헤븐컴퍼니">
+        <h3>내일 급등 종목 받아보기</h3>
+        <p class="caption">
+          *해당 정보를 입력하시면 분석된 종목을 제공해드립니다.
+        </p>
+        <form class="modal-form" action="<?=$_SERVER["PHP_SELF"]?>" method="post">
+		<input name="Update_type" type="hidden" value="Update_now">
+          <div>
+            <input type="name" name="name" placeholder="이름을 입력해 주세요">
+          </div>
+          <div class="tellnum">
+            <select name="tel" id="tel">
+              <option value="010">010</option>
+              <option value="011">011</option>
+              <option value="016">016</option>
+              <option value="017">017</option>
+              <option value="018">018</option>
+              <option value="019">019</option>
+            </select>
+            <span>-</span>
+            <input type="tel" name="tel2" placeholder="" maxlength="4">
+            <span>-</span>
+            <input type="tel" name="tel3" placeholder="" maxlength="4">
+          </div>
+
+          <ul class="radioBox">
+            <li>
+              <ul class="invest">
+                <li>투자유형</li>
+                <li>
+                  <ul class="investType-option">
+                    <li>
+                      <input type="radio" id="shortHit" name="option1" value="단타">
+        			        <label for="shortHit" class="radio">단타</label>
+                    </li>
+        
+                    <li>
+                      <input type="radio" id="longHit" name="option1" value="장기">
+          			      <label for="longHit" class="radio">장기</label>
+                    </li>
+        
+                    <li>
+                      <input type="radio" id="principalRecovery" name="option1" value="원금회복">
+          			      <label for="principalRecovery" class="radio">원금회복</label>
+                    </li>
+        
+                    <li>
+                      <input type="radio" id="beginner" name="option1" value="초보">
+        			        <label for="beginner" class="radio">초보</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+  
+            <li>
+              <ul class="invest">
+                <li>투자금액</li>
+                <li>
+                  <ul class="investType-option">
+                    <li>
+                      <input type="radio" id="investOption1" name="option2" value="1천이하">
+        			        <label for="investOption1" class="radio">1천이하</label>
+                    </li>
+        
+                    <li>
+                      <input type="radio" id="investOption2" name="option2" value="2천이하">
+          			      <label for="investOption2" class="radio">2천이하</label>
+                    </li>
+        
+                    <li>
+                      <input type="radio" id="investOption3" name="option2" value="5천이상">
+          			      <label for="investOption3" class="radio">5천이상</label>
+                    </li>
+        
+                    <li>
+                      <input type="radio" id="investOption4" name="option2" value="계좌없음">
+        			        <label for="investOption4" class="radio">계좌없음</label>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            
+            <li>
+              <ul class="invest">
+                <li><span>종목확인</span> 가능시간</li>
+                <li>
+                  <ul>
+                    <li class="investType-option ratio-select">
+                      <select name="time" id="time">
+                        <option value="아무때나">아무때나</option>
+                        <option value="07시~10시">07시 ~ 10시</option>
+                        <option value="10시~14시">10시 ~ 14시</option>
+                        <option value="14시~18시">14시 ~ 18시</option>
+                        <option value="18시~24시">18시 ~ 24시</option>
+                      </select>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+            
+          <ul class="check_box">
+            <li class="checkBox check01">
+              <label class="checkAllBtn">
+                아래 전체약관에 동의합니다.
+                <input type="checkbox" name="chkAll" id="chkAll" class="chkAll">
+                <em></em>
+              </label>
+            </li>
+            <li class="checkBox check02">
+              <label class="checkBtn">
+                <span>개인정보 수집 및 활용동의(필수)</span>
+                <a href="privacy-1.html" target="_blank">[보기]</a>
+                <input type="checkbox" name="chk" class="chk">
+                <em></em>
+              </label>
+            </li>
+            <li class="checkBox check03">
+              <label class="checkBtn">
+                <span>개인정보 제 3자 제공동의(필수)</span>
+                <a href="privacy-3.html" target="_blank">[보기]</a>
+                <input type="checkbox" name="chk" class="chk">
+                <em></em>
+              </label>
+            </li>
+            <li class="checkBox check04">
+              <label class="checkBtn">
+                <span>광고성 문자메세지 수신동의(필수)</span>
+                <a href="privacy-2.html" target="_blank">[보기]</a>
+                <input type="checkbox" name="chk" class="chk">
+                <em></em>
+              </label>
+            </li>
+        </ul>
+
+        </form>
+        <a class="btn-guide" href="#"><em>급등 종목</em> 받아보기</a>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRMQZ65X"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+</html>

@@ -1,0 +1,194 @@
+@media (max-width:768px){
+  .wrap{max-width: 100%;}
+  .content-1{
+    padding: 20px;
+  }
+  .percent{
+    text-align: center;
+    font-size: 20rem;
+  }
+  .percent p span:last-child{position: relative;}
+  .content-2 ul{justify-content: center;}
+  .content-2 ul li p{font-size: 1.5rem;}
+  .content-2 ul li strong{font-size: 1.93rem;}
+  .content-2 ul li em{font-size: 1.9rem;}
+  .content-3 .sentence{font-size: 2.25rem;}
+  .content-3 .graph li{width: 4rem;}
+
+  .modal-content{
+    max-width: 80%;
+  }
+  .modal-form input[type=name]{width: auto;}
+  .tellnum input[type=tel], .modal-form select[name=tel]{width: 80px;}
+  .modal-form .radioBox .invest{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .modal-form .radioBox .invest span{display: inline;}
+  .modal-form ul li select{width: 200px;}
+
+  .stock-list {
+    grid-template-rows: auto; /* 768px 미만에서 각 요소가 한 줄로 나열되도록 변경 */
+    grid-template-columns: 1fr; /* 768px 미만에서 열은 1개로 설정 */
+    gap: 20px;
+  }
+  .stock-item:nth-child(1),
+  .stock-item:nth-child(2),
+  .stock-item:nth-child(3),
+  .stock-item:nth-child(4),
+  .stock-item:nth-child(5),
+  .stock-item:nth-child(6),
+  .stock-item:nth-child(7){
+    grid-row: auto;
+    grid-column: auto;
+  }
+
+  .stock-item:nth-child(4) ul{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .stock-item:nth-child(4) ul li{
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .stock-item strong{display: inline;}
+
+  .s-wrap .container{flex-direction: column;}
+  .s-wrap h2{font-size: 4rem;}
+}
+
+@media (max-width:619px){
+  .wrap{
+    max-width: 100%;
+    white-space:wrap;
+  }
+
+  .content-1{
+    padding: 5px;
+    font-size: 3rem;
+    line-height: normal;
+  }
+
+  .percent{
+    font-size: 13rem;
+  }
+  .percent p span:last-child{font-size: 2rem;}
+
+  .content-2 ul{
+    flex-direction: column;
+  }
+  .content-2 ul li{
+    border-right: none;
+    border-bottom: 1px dashed #6cff6c;
+    padding: 20px 0px 20px 0px;
+  }
+  .content-2 ul li:first-child{padding-top: 0;}
+  .content-2 ul li:last-child{padding-bottom: 0;}
+  .content-2 ul li span{display: inline;}
+
+  .content-3 .graph{width: 60%;}
+  .content-3 .graph li{width: 2.5rem;}
+  .content-3 .btn-green a{
+    padding: 5px 30px;
+  }
+
+  .content-4 .btns{
+    height: 220px;
+  }
+  .content-4 .btns li{
+    width: 240px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 1.111rem;
+    text-align: center;
+  }
+  .content-4 .btns li::after{
+    right: auto;
+    left: -3%;
+    font-size: 1.4rem;
+  }
+
+  .content-4-sentence1{
+    font-size: 2rem;
+    line-height: 40px;
+  }
+  .content-4-sentence1 strong{font-size: 3rem;}
+  .content-4-sentence1 em{font-size: 4rem;}
+
+  .btn-white a{
+    width: 240px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width:619px){
+  .content-1{font-size: 2.5rem;}
+
+  .content-3 .sentence{
+    margin: 50px 0;
+    font-size: 1.4rem;
+  }
+  .content-3{margin: 100px 0 100px 0;}
+
+  .content-4{
+    padding: 20px;
+    padding-right: 40px;
+  }
+
+  .content-4-sentence1{font-size: 1.5rem;}
+  .content-4-sentence1 em{font-size: 3rem;}
+  .content-4-sentence1 strong{font-size: 2rem;}
+  .content-2 ul li{flex-basis: auto;}
+  .content-3 .graph li:nth-child(4) p{
+    font-size: 1.2rem;
+  }
+
+  .modal-body h3{font-size: 1.3rem;}
+
+  .modal-form .checkAllBtn, .modal-form .checkBtn{
+    justify-content: center;
+  }
+  .checkBtn input.chk, .checkBtn em{margin-left: 0;}
+
+  .btn-guide{
+    width: 200px;
+    font-size:1rem;
+  }
+
+  .modal-content img{display: none;}
+
+  .modal-form .radioBox ul li{margin: 3px;}
+
+  .modal-form .radioBox .invest .investType-option{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+  .modal-form .radioBox .invest .investType-option.ratio-select{display: flex;}
+  .investType-option li {
+    text-align: left;
+  }
+
+  footer p{
+    font-size: .8rem;
+    width: 80%;
+  }
+  footer ul{font-size: .8rem;}
+
+  .s-wrap h2{font-size: 3rem;}
+}
+
+@media (max-width:320px){
+  .content-1{font-size: 2.2rem;}
+  .percent{font-size: 12rem;}
+  .modal-form ul li select{width: 100px;}
+  .modal-form .check_box{font-size: 0.8rem;}
+  .caption{white-space:wrap; font-size: 0.8rem;}
+  .stock-list, .stock-item strong{font-size: 1rem;}
+  .s-wrap h2{font-size: 2rem;}
+}
+

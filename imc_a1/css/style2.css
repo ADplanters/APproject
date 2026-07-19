@@ -1,0 +1,25 @@
+@import url(common.css);
+
+.wrap{
+  width: 100%;
+  max-width: 740px;
+  margin: auto;
+}
+
+h1{
+  text-align: center;
+  background-color: #ddd;
+  padding: 20px;
+  margin-bottom: 50px;
+}
+
+.content{
+  padding: 0 50px;
+}
+h2{margin: 30px 0;}
+p{margin: 30px 0;}
+
+li{
+  list-style: circle;
+  list-style-position: inside;
+}
