@@ -248,9 +248,10 @@ document.addEventListener('DOMContentLoaded', function () {
           return false;
       }
 
+      // [보안 우회 방지 적용] HTML Form의 강제 리다이렉트 기본 동작을 차단합니다.
+      event.preventDefault();
       document.querySelector('.modal-form').submit();
 
       // window.location.href = 'success.html';
   });
 });
-
