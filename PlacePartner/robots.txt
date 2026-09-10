@@ -1,0 +1,8 @@
+# 플레이스 파트너 공식 검색엔진 크롤링 허용 정책
+
+# 모든 검색엔진 로봇(구글, 네이버 등)의 접근을 허용합니다.
+User-agent: *
+Allow: /
+
+# 사이트맵 위치를 명시하여 로봇이 사이트 구조를 더 빨리 파악하게 돕습니다.
+Sitemap: https://placepartner.github.io/sitemap.xml
