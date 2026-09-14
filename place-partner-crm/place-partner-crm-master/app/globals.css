@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 🌟 조밀해진 모눈종이 격자 & PLACE PARTNER 워터마크 배경 */
+.bg-place-partner {
+  background-color: #fcfcfc !important;
+  background-image: 
+    /* 1. 모눈종이 격자선 (20px 간격) */
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    /* 2. 촘촘해진 대각선 PLACE PARTNER 워터마크 (160px x 110px 타일) */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='110' viewBox='0 0 160 110'%3E%3Ctext x='15' y='60' fill='%23DC2626' fill-opacity='0.045' font-size='13' font-weight='900' font-family='sans-serif' transform='rotate(-20 80 55)'%3EPLACE PARTNER%3C/text%3E%3C/svg%3E") !important;
+  background-size: 20px 20px, 20px 20px, 160px 110px !important;
+}
